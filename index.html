@@ -14,7 +14,6 @@
         }
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; scroll-behavior: smooth; }
         
-        /* Menu e Logo com Slogan */
         header { 
             background: var(--branco); padding: 10px 5%; 
             display: flex; justify-content: space-between; align-items: center; 
@@ -23,64 +22,40 @@
         .header-logo-container { display: flex; align-items: center; gap: 15px; }
         .logo img { height: 60px; }
         .slogan { 
-            font-size: 13px; 
-            color: var(--azul-bt); 
-            font-style: italic; 
-            border-left: 2px solid var(--azul-claro); 
-            padding-left: 10px;
-            max-width: 180px;
-            line-height: 1.2;
-            font-weight: 500;
+            font-size: 13px; color: var(--azul-bt); font-style: italic; 
+            border-left: 2px solid var(--azul-claro); padding-left: 10px;
+            max-width: 180px; line-height: 1.2; font-weight: 500;
         }
         nav a { margin-left: 20px; text-decoration: none; color: var(--azul-bt); font-weight: 600; font-size: 14px; }
 
-        /* Banner Principal */
         .hero { 
-            background: linear-gradient(rgba(29, 45, 91, 0.75), rgba(29, 45, 91, 0.75)), url('https://images.unsplash.com/photo-1454165833767-027ffea9e787?auto=format&fit=crop&w=1500&q=80'); 
-            height: 70vh; background-size: cover; background-position: center;
+            background: linear-gradient(rgba(29, 45, 91, 0.75), rgba(29, 45, 91, 0.75)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1500&q=80'); 
+            height: 60vh; background-size: cover; background-position: center;
             color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px;
         }
-        .hero h1 { font-size: 2.8rem; margin: 0; animation: fadeIn 1.5s ease-in; }
-        .hero p { font-size: 1.2rem; margin: 20px 0; max-width: 650px; }
+        .hero h1 { font-size: 2.8rem; margin: 0; }
 
-        /* Sobre Nós */
-        .sobre { padding: 80px 10%; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
-        .sobre-texto { flex: 1; min-width: 300px; }
-        .sobre-texto h2 { color: var(--azul-bt); font-size: 2.2rem; margin-bottom: 20px; }
-        .sobre-texto p { line-height: 1.8; color: #555; margin-bottom: 15px; }
-
-        /* Serviços */
-        .servicos { padding: 80px 5%; background: var(--cinza); text-align: center; }
+        .servicos { padding: 60px 5%; background: var(--cinza); text-align: center; }
         .grid-servicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.08); text-align: left; transition: 0.3s; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.08); text-align: left; transition: 0.3s; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-10px); }
-        .card img { width: 100%; height: 220px; object-fit: cover; }
-        .card-body { padding: 25px; }
-        .card-body h3 { color: var(--azul-bt); margin-top: 0; font-size: 1.4rem; }
-        .btn-card { display: inline-block; margin-top: 15px; padding: 12px 25px; background: var(--azul-claro); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
-        .btn-card:hover { background: var(--azul-bt); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-body { padding: 20px; flex-grow: 1; }
+        .card-body h3 { color: var(--azul-bt); margin-top: 0; font-size: 1.25rem; min-height: 50px; }
+        .btn-card { display: block; text-align: center; margin-top: 15px; padding: 12px; background: var(--azul-claro); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
 
-        /* Botão WhatsApp Flutuante */
         .whats-fixo {
             position: fixed; bottom: 30px; right: 30px; 
-            background: var(--verde-whats); color: white; 
-            width: 65px; height: 65px; border-radius: 50%;
+            background: var(--verde-whats); width: 65px; height: 65px; border-radius: 50%;
             display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; 
-            transition: 0.3s;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3); z-index: 1000;
         }
-        .whats-fixo:hover { transform: scale(1.1); }
 
-        footer { background: var(--azul-bt); color: white; text-align: center; padding: 60px 20px; }
+        footer { background: var(--azul-bt); color: white; text-align: center; padding: 40px 20px; }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        
         @media (max-width: 768px) { 
-            header { flex-direction: column; gap: 15px; text-align: center; }
-            .header-logo-container { flex-direction: column; gap: 5px; }
-            .slogan { border-left: none; border-top: 1px solid var(--azul-claro); padding: 5px 0 0 0; }
-            .hero h1 { font-size: 1.8rem; }
-            .sobre { padding: 40px 5%; }
+            header { flex-direction: column; gap: 10px; }
+            .hero h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -88,62 +63,65 @@
 
 <header>
     <div class="header-logo-container">
-        <div class="logo">
-            <img src="logo.png" alt="BT Consultoria">
-        </div>
-        <div class="slogan">
-            Pensando no presente e planejando seu futuro.
-        </div>
+        <div class="logo"><img src="logo.png" alt="BT Consultoria"></div>
+        <div class="slogan">Pensando no presente e planejando seu futuro.</div>
     </div>
     <nav>
-        <a href="#sobre">Sobre</a>
         <a href="#solucoes">Soluções</a>
         <a href="https://wa.me/5521975896052" target="_blank" style="color: var(--verde-whats);">WhatsApp</a>
     </nav>
 </header>
 
 <section class="hero">
-    <h1>BT Consultoria & Corretora</h1>
-    <p>Proteção financeira e suporte especializado para você viver com tranquilidade hoje e segurança amanhã.</p>
-    <a href="#solucoes" class="btn-card" style="padding: 18px 40px; border-radius: 50px;">Conheça Nossas Soluções</a>
-</section>
-
-<section id="sobre" class="sobre">
-    <div class="sobre-texto">
-        <h2>Consultoria de Confiança</h2>
-        <p>A <strong>BT Consultoria e Corretora de Seguros</strong> atua no mercado com um olhar diferenciado: não entregamos apenas uma apólice, entregamos um plano de proteção para a vida.</p>
-        <p>Entendemos que o presente exige cuidado imediato com a saúde e a renda, enquanto o futuro pede planejamento para a família e o patrimônio. Com atendimento humanizado e ágil, estamos prontos para ser o seu porto seguro.</p>
-    </div>
-    <div style="flex: 1; min-width: 300px;">
-        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" alt="Atendimento BT">
-    </div>
+    <h1>Proteção de Saúde e Renda</h1>
+    <p>Soluções completas para imprevistos hospitalares e diagnósticos graves.</p>
 </section>
 
 <section id="solucoes" class="servicos">
-    <h2>Soluções Especializadas</h2>
+    <h2>Nossas Soluções</h2>
     <div class="grid-servicos">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=500" alt="Seguro Vida">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500" alt="Doenças Graves">
             <div class="card-body">
-                <h3>Vida & Assistência Funeral</h3>
-                <p>Amparo total para sua família. Garantimos suporte financeiro e assistência humanizada no momento em que ela mais precisar.</p>
-                <a href="https://wa.me/5521975896052?text=Olá! Quero saber mais sobre Seguro de Vida e Funeral." class="btn-card">Cote Agora</a>
+                <h3>Doenças Graves</h3>
+                <p>Receba uma indenização em dinheiro no diagnóstico de doenças como câncer, infarto ou AVC para custear seu tratamento.</p>
+                <a href="https://wa.me/5521975896052?text=Quero saber sobre Seguro para Doenças Graves" class="btn-card">Saber Mais</a>
             </div>
         </div>
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=500" alt="Plano Saúde">
+            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=500" alt="Internação">
+            <div class="card-body">
+                <h3>Internação e Cirurgias</h3>
+                <p>Amparo financeiro para despesas hospitalares e procedimentos cirúrgicos, garantindo tranquilidade no seu restabelecimento.</p>
+                <a href="https://wa.me/5521975896052?text=Quero saber sobre Seguro de Internação e Cirurgias" class="btn-card">Saber Mais</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&w=500" alt="Vida">
+            <div class="card-body">
+                <h3>Vida & Assist. Funeral</h3>
+                <p>Segurança para quem você ama com suporte total e humanizado nos momentos mais delicados.</p>
+                <a href="https://wa.me/5521975896052?text=Quero saber sobre Seguro de Vida e Funeral" class="btn-card">Saber Mais</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=500" alt="Saúde">
             <div class="card-body">
                 <h3>Saúde & Odontológico</h3>
-                <p>Acesso aos melhores hospitais e dentistas. Planos sob medida para indivíduos, famílias e empresas de todos os tamanhos.</p>
-                <a href="https://wa.me/5521975896052?text=Olá! Quero saber sobre Planos de Saúde e Dental." class="btn-card">Cote Agora</a>
+                <p>Planos completos com as melhores redes médicas para cuidar do seu bem mais precioso todos os dias.</p>
+                <a href="https://wa.me/5521975896052?text=Quero saber sobre Planos de Saúde" class="btn-card">Saber Mais</a>
             </div>
         </div>
+
         <div class="card">
             <img src="https://images.unsplash.com/photo-1454165833767-027ffea9e787?auto=format&fit=crop&w=500" alt="DIT">
             <div class="card-body">
-                <h3>Renda (DIT) & Invalidez</h3>
-                <p>Proteção para o profissional autônomo. Se você precisar parar por doença ou acidente, sua renda continua garantida.</p>
-                <a href="https://wa.me/5521975896052?text=Olá! Gostaria de informações sobre o seguro de renda DIT." class="btn-card">Cote Agora</a>
+                <h3>Renda (DIT)</h3>
+                <p>Proteção financeira para profissionais liberais e autônomos que precisam manter sua renda durante um afastamento.</p>
+                <a href="https://wa.me/5521975896052?text=Quero saber sobre Seguro DIT" class="btn-card">Saber Mais</a>
             </div>
         </div>
     </div>
@@ -151,9 +129,8 @@
 
 <footer>
     <p><strong>BT Consultoria e Corretora de Seguros</strong></p>
-    <p>Atendimento Especializado | Rio de Janeiro - RJ</p>
-    <p>WhatsApp: (21) 97589-6052</p>
-    <p style="margin-top: 30px; opacity: 0.7; font-size: 12px;">© 2026 - Pensando no presente e planejando seu futuro.</p>
+    <p>WhatsApp: (21) 97589-6052 | Rio de Janeiro - RJ</p>
+    <p style="font-size: 11px; opacity: 0.7;">© 2026 - Pensando no presente e planejando seu futuro.</p>
 </footer>
 
 <a href="https://wa.me/5521975896052" class="whats-fixo" target="_blank">
