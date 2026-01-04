@@ -10,6 +10,142 @@
             --azul-claro: #0077b6;
             --verde-whats: #25d366;
             --branco: #ffffff;
+            --cinza: #f8f9fa;
+        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; scroll-behavior: smooth; }
+        
+        /* Menu */
+        header { 
+            background: var(--branco); padding: 10px 5%; 
+            display: flex; justify-content: space-between; align-items: center; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+        }
+        .logo img { height: 65px; }
+        nav a { margin-left: 20px; text-decoration: none; color: var(--azul-bt); font-weight: 600; font-size: 14px; }
+
+        /* Banner Principal */
+        .hero { 
+            background: linear-gradient(rgba(29, 45, 91, 0.7), rgba(29, 45, 91, 0.7)), url('https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=1500&q=80'); 
+            height: 80vh; background-size: cover; background-position: center;
+            color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px;
+        }
+        .hero h1 { font-size: 3rem; margin: 0; }
+        .hero p { font-size: 1.3rem; margin: 20px 0; max-width: 600px; }
+
+        /* Seção Sobre Nós */
+        .sobre { padding: 80px 10%; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .sobre-texto { flex: 1; min-width: 300px; }
+        .sobre-texto h2 { color: var(--azul-bt); font-size: 2.2rem; }
+        .sobre-texto p { line-height: 1.8; color: #555; }
+
+        /* Serviços */
+        .servicos { padding: 60px 5%; background: var(--cinza); text-align: center; }
+        .grid-servicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-body { padding: 25px; }
+        .card-body h3 { color: var(--azul-bt); margin-top: 0; }
+        .btn-card { display: inline-block; margin-top: 15px; padding: 10px 20px; background: var(--azul-claro); color: white; text-decoration: none; border-radius: 5px; font-size: 14px; transition: 0.3s; }
+        .btn-card:hover { background: var(--azul-bt); }
+
+        /* Botão WhatsApp Flutuante */
+        .whats-fixo {
+            position: fixed; bottom: 30px; right: 30px; 
+            background: var(--verde-whats); color: white; 
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; font-size: 30px;
+        }
+
+        footer { background: var(--azul-bt); color: white; text-align: center; padding: 50px 20px; }
+        
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .sobre { padding: 40px 5%; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="BT Consultoria">
+    </div>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="https://wa.me/5521975896052" target="_blank" style="color: var(--verde-whats);">Falar com Consultor</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>BT Consultoria & Corretora</h1>
+    <p>Consultoria técnica e humanizada para proteger você, sua família e seu patrimônio.</p>
+    <a href="#solucoes" class="btn-card" style="padding: 15px 30px; font-size: 16px;">Ver Planos e Seguros</a>
+</section>
+
+<section id="sobre" class="sobre">
+    <div class="sobre-texto">
+        <h2>Sobre Nós</h2>
+        <p>A <strong>BT Consultoria e Corretora de Seguros</strong> nasceu com a missão de oferecer mais do que apenas apólices. Somos especialistas em entender as necessidades reais de nossos clientes, oferecendo suporte jurídico e técnico na escolha do melhor seguro.</p>
+        <p>Nossa equipe atua com transparência, ética e agilidade, garantindo que você tenha o amparo necessário no momento em que mais precisar. Seja para sua saúde, para sua carreira ou para sua família, a BT está ao seu lado.</p>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+        <img src="https://images.unsplash.com/photo-1600880212319-7524e2727928?auto=format&fit=crop&w=600&q=80" style="width: 100%; border-radius: 15px;" alt="Equipe BT">
+    </div>
+</section>
+
+<section id="solucoes" class="servicos">
+    <h2>Nossas Especialidades</h2>
+    <div class="grid-servicos">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&w=500" alt="Vida">
+            <div class="card-body">
+                <h3>Vida e Assist. Funeral</h3>
+                <p>Proteção financeira para quem você ama e tranquilidade nos momentos mais difíceis.</p>
+                <a href="https://wa.me/5521975896052?text=Quero saber mais sobre Seguro de Vida" class="btn-card">Pedir Cotação</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500" alt="Saúde">
+            <div class="card-body">
+                <h3>Saúde e Dental</h3>
+                <p>Planos individuais e empresariais com as melhores redes médicas do Rio e do Brasil.</p>
+                <a href="https://wa.me/5521975896052?text=Quero saber sobre Plano de Saúde" class="btn-card">Pedir Cotação</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=500" alt="DIT">
+            <div class="card-body">
+                <h3>Renda (DIT) e Invalidez</h3>
+                <p>Garanta seus ganhos mensais mesmo se precisar se afastar por doença ou acidente.</p>
+                <a href="https://wa.me/5521975896052?text=Quero saber sobre Seguro DIT" class="btn-card">Pedir Cotação</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p><strong>BT Consultoria e Corretora de Seguros</strong></p>
+    <p>Rua Exemplo, Rio de Janeiro | (21) 97589-6052</p>
+    <p>© 2026 - Protegendo o seu futuro.</p>
+</footer>
+
+<a href="https://wa.me/5521975896052" class="whats-fixo" target="_blank" title="Chamar no WhatsApp">
+    <span style="font-size: 40px;">💬</span>
+</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT Consultoria & Corretora de Seguros</title>
+    <style>
+        :root {
+            --azul-bt: #1d2d5b;
+            --azul-claro: #0077b6;
+            --verde-whats: #25d366;
+            --branco: #ffffff;
             --cinza-fundo: #f4f7f6;
         }
         body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; color: #333; scroll-behavior: smooth; }
